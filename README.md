@@ -100,7 +100,7 @@ will to use heroku's env vars to store our bot's secret keys. For that, we first
 create the new variable on heroku:
 
 ```
-heroku config:set SECRET_KEY_BASE="<YOUR_PAGE_ACCESS_KEY>"
+heroku config:set FB_PAGE_ACCESS_KEY="<YOUR_PAGE_ACCESS_KEY>"
 ```
 
 Then generate another key to be your webhook verify token

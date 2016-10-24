@@ -1,5 +1,6 @@
 defmodule KittyBot.Router do
   use KittyBot.Web, :router
+  use FacebookMessenger.Phoenix.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,6 +19,8 @@ defmodule KittyBot.Router do
 
     get "/", PageController, :index
   end
+
+  facebook_routes "/api/webhook", KittyBot.BotController
 
   # Other scopes may use custom stacks.
   # scope "/api", KittyBot do

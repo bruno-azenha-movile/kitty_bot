@@ -17,6 +17,10 @@ config :kitty_bot, KittyBot.Endpoint,
   pubsub: [name: KittyBot.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :facebook_messenger,
+   facebook_page_token: System.get_env("FB_PAGE_ACCESS_TOKEN"),
+   challenge_verification_token: System.get_env("FB_VERIFICATION_TOKEN")
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

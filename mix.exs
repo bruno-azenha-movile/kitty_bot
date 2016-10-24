@@ -19,7 +19,7 @@ defmodule KittyBot.Mixfile do
   def application do
     [mod: {KittyBot, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :httpotion]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,6 +37,8 @@ defmodule KittyBot.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
+     {:httpotion, "~> 3.0.2"},
+     {:phoenix_facebook_messenger, git: "https://github.com/Bilue/phoenix_facebook_messenger.git"},
      {:cowboy, "~> 1.0"}]
   end
 
